@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>RSS e-mailer</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <link href="/css/cover.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Welcome to the RSS e-mailer</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <form>
+    <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="input_email" placeholder="name@example.com">
+        </div>
+    </div>
+    <div class="form-group row">
+        <button class="btn btn-outline-info col-sm-2" type="button" id="add_rss_btn" onclick="addRssFromInput()">Add RSS</button>
+        <div class="col-sm-10">
+            <input type="text" id="input_rss" class="form-control" placeholder="https://example.site/rss.xml">
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Content</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+  </form>
+
+  <div class="btn-group" data-toggle="buttons">
+    <button type="button" class="btn btn-primary mr-3" id="save_btn" onclick="saveChanges()">Save</button>
+    <button type="button" class="btn btn-secondary mr-3" id="preview_btn" onclick="getPreview()">Preview</button>
+    <button type="button" class="btn btn-danger" onclick="sendMail()" id="send_btn">Send</button>
+  </div>
+  <div>
+    <h5 class="float-md-start mb-0 list-label">Your scheduled emails:</h5>
+    <div class="card" style="width: 100%;">
+      <ul class="list-group list-group-flush" id="list_rss">
+      </ul>
+    </div>
+  </div>
+
+  <footer class="mt-auto text-white-50">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script> 
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
