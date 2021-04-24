@@ -39,7 +39,6 @@ function MailBuilder () {
       })
       mail += '</mj-column></mj-section>'
     })
-
     return mjml2html(`<mjml><mj-body>${mail}</mj-body></mjml>`)
   }
 }
